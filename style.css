@@ -1,261 +1,262 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 body {
-  font-family: "Muli", sans-serif;
-  color: rgb(51, 51, 51);
+	font-family: "Muli", sans-serif;
+	color: rgb(51, 51, 51);
 }
 button {
-  font-family: "Muli", sans-serif;
+	font-family: "Muli", sans-serif;
 }
 path,
 i,
 svg {
-  pointer-events: none;
+	pointer-events: none;
 }
 .colors {
-  min-height: 80vh;
-  display: flex;
-  color: rgb(212, 212, 212);
+	min-height: 80vh;
+	display: flex;
+	color: rgb(212, 212, 212);
 }
 .color {
-  height: 80vh;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  position: relative;
-  overflow: hidden;
+	height: 80vh;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	position: relative;
+	overflow: hidden;
 }
 .color h2 {
-  font-size: 2rem;
-  cursor: pointer;
+	font-size: 2rem;
+	cursor: pointer;
 }
 .sliders {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  bottom: 0%;
-  background: rgb(255, 255, 255);
-  opacity: 0;
-  padding: 1rem;
-  width: 80%;
-  border-top-right-radius: 1rem;
-  pointer-events: none;
-  border-top-left-radius: 1rem;
-  transform: translateY(100px);
-  transition: all 0.5s ease-in-out;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	bottom: 0%;
+	background: rgb(255, 255, 255);
+	opacity: 0;
+	padding: 1rem;
+	width: 80%;
+	border-top-right-radius: 1rem;
+	pointer-events: none;
+	border-top-left-radius: 1rem;
+	transform: translateY(100px);
+	transition: all 0.5s ease-in-out;
 }
 .sliders.active {
-  opacity: 1;
-  transform: translateY(0px);
-  pointer-events: all;
+	opacity: 1;
+	transform: translateY(0px);
+	pointer-events: all;
 }
 .sliders button,
 .close-save,
 .close-library {
-  position: absolute;
-  top: 0;
-  right: 0rem;
-  padding: 0.6rem;
-  border-bottom-left-radius: 1rem;
-  border: none;
-  background: rgb(60, 60, 92);
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
+	position: absolute;
+	top: 0;
+	right: 0rem;
+	padding: 0.6rem;
+	border-bottom-left-radius: 1rem;
+	border: none;
+	background: rgb(60, 60, 92);
+	color: white;
+	cursor: pointer;
+	font-weight: bold;
 }
 
 .controls {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 .panel {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 20vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	height: 20vh;
+	background-color: rgb(250, 250, 250);
 }
 .panel button {
-  font-size: 1.2rem;
-  margin: 1rem;
-  padding: 1rem 2rem;
-  background: rgb(31, 33, 63);
-  border: none;
-  color: white;
-  cursor: pointer;
-  border-radius: 1rem;
+	font-size: 1.2rem;
+	margin: 1rem;
+	padding: 1rem 2rem;
+	background: rgb(31, 33, 63);
+	border: none;
+	color: white;
+	cursor: pointer;
+	border-radius: 1rem;
 }
 .panel p {
-  font-size: 1.2rem;
+	font-size: 1.2rem;
 }
 .library-panel,
 .generate-panel,
 .save-panel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .adjust,
 .lock {
-  font-size: 2rem;
-  border: none;
-  background: none;
-  cursor: pointer;
-  margin: 2rem 0rem;
+	font-size: 2rem;
+	border: none;
+	background: none;
+	cursor: pointer;
+	margin: 2rem 0rem;
 }
 
 /* Slider Stuff */
 input[type="range"] {
-  -webkit-appearance: none;
-  margin: 1rem 0rem;
-  width: 100%;
-  position: relative;
-  border-radius: 1rem;
-  cursor: pointer;
+	-webkit-appearance: none;
+	margin: 1rem 0rem;
+	width: 100%;
+	position: relative;
+	border-radius: 1rem;
+	cursor: pointer;
 }
 
 .copy-container,
 .save-container,
 .library-container {
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  background: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  transition: all 0.5s ease-in-out;
-  align-items: center;
-  opacity: 0;
-  pointer-events: none;
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	background: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	transition: all 0.5s ease-in-out;
+	align-items: center;
+	opacity: 0;
+	pointer-events: none;
 }
 .copy-popup,
 .save-popup,
 .library-popup {
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  border-radius: 2rem;
-  transition: transform 0.5s ease;
-  transform: translateY(-2rem);
-  min-width: 30%;
-  min-height: 30vh;
-  overflow: hidden;
-  color: rgb(73, 73, 73);
-  /* color: rgb(60, 60, 92); */
+	background: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	border-radius: 2rem;
+	transition: transform 0.5s ease;
+	transform: translateY(-2rem);
+	min-width: 30%;
+	min-height: 30vh;
+	overflow: hidden;
+	color: rgb(73, 73, 73);
+	/* color: rgb(60, 60, 92); */
 }
 .copy-popup h4,
 .save-popup h4,
 .library-popup h4 {
-  font-size: 2rem;
-  padding: 2rem;
+	font-size: 2rem;
+	padding: 2rem;
 }
 .copy-container.active,
 .save-container.active,
 .library-container.active {
-  opacity: 1;
-  pointer-events: all;
+	opacity: 1;
+	pointer-events: all;
 }
 .copy-popup.active,
 .save-popup.active,
 .library-popup.active {
-  transform: translateY(0rem);
+	transform: translateY(0rem);
 }
 
 .save-name {
-  font-size: 1.5rem;
-  padding: 1rem;
+	font-size: 1.5rem;
+	padding: 1rem;
 }
 
 .submit-save {
-  margin: 2rem;
-  padding: 1rem 3rem;
-  background: rgb(60, 60, 92);
-  border: none;
-  border-radius: 10px;
-  color: white;
-  cursor: pointer;
+	margin: 2rem;
+	padding: 1rem 3rem;
+	background: rgb(60, 60, 92);
+	border: none;
+	border-radius: 10px;
+	color: white;
+	cursor: pointer;
 }
 
 .library-popup {
-  min-width: 40%;
-  /* padding: 1rem; */
-  justify-content: flex-start;
-  overflow-y: scroll;
-  max-height: 50vh;
+	min-width: 40%;
+	/* padding: 1rem; */
+	justify-content: flex-start;
+	overflow-y: scroll;
+	max-height: 50vh;
 }
 .custom-palette {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
-  padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 100%;
+	padding: 2rem;
 }
 
 .custom-palette h4 {
-  flex: 1;
-  padding: 1rem;
-  font-size: 1.8rem;
+	flex: 1;
+	padding: 1rem;
+	font-size: 1.8rem;
 }
 
 .small-preview {
-  display: flex;
-  flex: 1;
-  margin: 0.5rem;
+	display: flex;
+	flex: 1;
+	margin: 0.5rem;
 }
 
 .small-preview div {
-  height: 5rem;
-  flex: 1;
+	height: 5rem;
+	flex: 1;
 }
 
 .preview-color-0 {
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
+	border-top-left-radius: 1rem;
+	border-bottom-left-radius: 1rem;
 }
 .preview-color-4 {
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+	border-top-right-radius: 1rem;
+	border-bottom-right-radius: 1rem;
 }
 
 .pick-palette-btn {
-  height: 5rem;
-  border: none;
-  padding: 1rem;
-  cursor: pointer;
-  font-size: 1.2rem;
-  background: rgb(41, 41, 41);
-  color: white;
-  border-radius: 1rem;
-  margin: 0.5rem;
+	height: 5rem;
+	border: none;
+	padding: 1rem;
+	cursor: pointer;
+	font-size: 1.2rem;
+	background: rgb(41, 41, 41);
+	color: white;
+	border-radius: 1rem;
+	margin: 0.5rem;
 }
 .delete {
-  height: 5rem;
-  border: none;
-  padding: 1rem;
-  cursor: pointer;
-  font-size: 1.2rem;
-  background: rgb(204, 13, 13);
-  color: white;
-  border-radius: 1rem;
-  margin: 0.5rem;
+	height: 5rem;
+	border: none;
+	padding: 1rem;
+	cursor: pointer;
+	font-size: 1.2rem;
+	background: rgb(204, 13, 13);
+	color: white;
+	border-radius: 1rem;
+	margin: 0.5rem;
 }
 
 .delete-all {
-  background: rgb(204, 13, 13);
-  padding: 0.5rem;
-  font-size: 1.2rem;
-  border: none;
-  color: white;
-  cursor: pointer;
-  border-radius: 10px;
-  margin-bottom: 2rem;
+	background: rgb(204, 13, 13);
+	padding: 0.5rem;
+	font-size: 1.2rem;
+	border: none;
+	color: white;
+	cursor: pointer;
+	border-radius: 10px;
+	margin-bottom: 2rem;
 }
