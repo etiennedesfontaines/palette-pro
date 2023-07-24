@@ -78,7 +78,7 @@ svg {
 	align-items: center;
 	justify-content: space-evenly;
 	height: 20vh;
-	background-color: rgb(250, 250, 250);
+	color: white;
 }
 .panel button {
 	font-size: 1.2rem;
