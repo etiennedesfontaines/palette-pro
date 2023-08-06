@@ -3,12 +3,34 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>PalettePro</title>
+		<meta
+			name="keywords"
+			content="colour palette, color palette, colour generator, colour inspiration"
+		/>
+		<meta
+			name="description"
+			content="A tool for randomly generating, editing and saving colour palettes to help elevate your designs."
+		/>
+
 		<link
 			href="https://fonts.googleapis.com/css?family=Muli:400,700&display=swap"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="./style.css" />
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+			integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs="
+			crossorigin="anonymous"
+			defer
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"
+			integrity="sha256-gX8uuyxN8stSMHWO9arnnKyenTOALaVAcVB3b6P87e4="
+			crossorigin="anonymous"
+			defer
+		></script>
+		<script src="./app.js" defer></script>
+		<title>PalettePro</title>
 	</head>
 	<body>
 		<div class="colors">
@@ -248,16 +270,5 @@
 				<button class="delete-all">Delete all palettes</button>
 			</div>
 		</div>
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
-			integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs="
-			crossorigin="anonymous"
-		></script>
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"
-			integrity="sha256-gX8uuyxN8stSMHWO9arnnKyenTOALaVAcVB3b6P87e4="
-			crossorigin="anonymous"
-		></script>
-		<script src="./app.js"></script>
 	</body>
 </html>
